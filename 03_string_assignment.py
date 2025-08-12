@@ -18,7 +18,8 @@ print("-" * 50)
 
 # Question 1: Reverse the string "Python Programming"
 print("Question 1: Reverse the string 'Python Programming'")
-
+N=('Python Programming')
+print(N[::-1])
 
 
 # Question 2: Check if "racecar" is a palindrome
@@ -161,79 +162,123 @@ print(L)
 # Question 20: Join list ['Python', 'is', 'awesome'] with spaces
 print("\nQuestion 20: Join list ['Python', 'is', 'awesome'] with spaces")
 N=['Python', 'is', 'awesome']
-M=
+for i in N:
+    if i  !=" ":
+        print(i)
+
 
 # Question 21: Check if string contains only digits: "12345"
 print("\nQuestion 21: Check if string contains only digits: '12345'")
-# Your code here
+print('12345' is string)
+
 
 # Question 22: Check if string contains only letters: "HelloWorld"
 print("\nQuestion 22: Check if string contains only letters: 'HelloWorld'")
-# Your code here
+print('HelloWorld'.isalpha())
 
 # Question 23: Convert "hello world" to "hElLo WoRlD" (alternating case)
 print("\nQuestion 23: Convert 'hello world' to 'hElLo WoRlD' (alternating case)")
-# Your code here
+
 
 # Question 24: Find all positions of 'a' in "banana"
 print("\nQuestion 24: Find all positions of 'a' in 'banana'")
-# Your code here
+N='banana'
+positions=[]
+for i in range(0,len(N)):
+    if N[i]=='a':
+        positions.append(i)
+        print(i)
+
 
 # Question 25: Remove leading and trailing whitespace from "  Hello World  "
 print("\nQuestion 25: Remove leading and trailing whitespace from '  Hello World  '")
-# Your code here
+N=('  Hello World  ')
+print(N.strip())
+
 
 # Question 26: Check if string ends with "ing": "programming"
 print("\nQuestion 26: Check if string ends with 'ing': 'programming'")
-# Your code here
+N=('programming')
+M=('ing')
+print(N.endswith(M))
 
 # Question 27: Replace first occurrence of 'o' with '0' in "Hello World"
 print("\nQuestion 27: Replace first occurrence of 'o' with '0' in 'Hello World'")
-# Your code here
+N=('Hello World')
+L=N.replace('o','0',1)
+print(L)
 
 # Question 28: Find the shortest word in "Python is a programming language"
 print("\nQuestion 28: Find the shortest word in 'Python is a programming language'")
-# Your code here
+
 
 # Question 29: Count words that start with 'p' in "Python programming is powerful"
 print("\nQuestion 29: Count words that start with 'p' in 'Python programming is powerful'")
-# Your code here
+N=('Python programming is powerful')
+M=N.split()
+count=0
+for item in N and N.lower():
+    if item.startswith('p'):
+        count +=1
+print(count)
+
 
 # Question 30: Reverse words in "Hello World Python"
 print("\nQuestion 30: Reverse words in 'Hello World Python'")
-# Your code here
+N=('Hello World Python')
+M=N.split()
+print(M[::-1])
 
 # Question 31: Check if string is a valid email format: "user@example.com"
 print("\nQuestion 31: Check if string is a valid email format: 'user@example.com'")
-# Your code here
+N=('user@example.com')
+if '@' in N and '.' in N and N.index('@')<N.index('.'):
+    print("valid email")
+else:
+    print("invalid email")
 
 # Question 32: Extract domain from "https://www.example.com/path"
 print("\nQuestion 32: Extract domain from 'https://www.example.com/path'")
-# Your code here
+N=('https://www.example.com/path')
+M=N.split('//')[-1].split('/')[0]
+print(N)
 
 # Question 33: Count lines in multi-line string
 print("\nQuestion 33: Count lines in multi-line string")
-# Your code here
+N=("This is the end,"
+"close your breathe and count to ten," 
+"fell the earth move and then,"
+"here my heart burst again")
+N.split()
+print(N)
 
 # Question 34: Find common characters between "hello" and "world"
 print("\nQuestion 34: Find common characters between 'hello' and 'world'")
-# Your code here
+N=('hello')
+M=('world')
+L=set(N)&set(M)
+print(L)
 
 # Question 35: Check if string is a valid phone number: "+1-555-123-4567"
 print("\nQuestion 35: Check if string is a valid phone number: '+1-555-123-4567'")
-# Your code here
+
 
 # Question 36: Extract numbers from "abc123def456ghi789"
 print("\nQuestion 36: Extract numbers from 'abc123def456ghi789'")
-# Your code here
+N=('abc123def456ghi789')
+M=('123456789')
+for i in N:
+    if i in M:
+        print(i,end='')
 
 # Question 37: Convert "snake_case" to "camelCase"
 print("\nQuestion 37: Convert 'snake_case' to 'camelCase'")
-# Your code here
+
 
 # Question 38: Check if string is a valid palindrome ignoring case: "A man a plan a canal Panama"
 print("\nQuestion 38: Check if string is a valid palindrome ignoring case: 'A man a plan a canal Panama'")
-# Your code here
+
+    
 
 # Question 39: Find the most common word in "the quick brown fox jumps over the lazy dog"
 print("\nQuestion 39: Find the most common word in 'the quick brown fox jumps over the lazy dog'")
