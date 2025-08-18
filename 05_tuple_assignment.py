@@ -45,13 +45,8 @@ print(f"the maximum value in tuple:{M}")
 # Question 5: Count how many times 5 appears in (1, 5, 2, 5, 3, 5, 4, 5, 6)
 print("\nQuestion 5: Count how many times 5 appears in (1, 5, 2, 5, 3, 5, 4, 5, 6)")
 N=(1, 5, 2, 5, 3, 5, 4, 5, 6)
-M=5
-count=0
-for i in N:
-    if i==M:
-        count +=1
-print(f"how many times 5 appears:{count}")
-
+M=N.count(5)
+print(M)
 
 # Question 6: Create a tuple of mixed data types (integer, float, string, boolean)
 print("\nQuestion 6: Create a tuple of mixed data types (integer, float, string, boolean)")
