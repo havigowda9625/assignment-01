@@ -267,8 +267,14 @@ print(M)
 
 # Question 49: Create a dictionary with nested sets: {'groups': {{1, 2, 3}, {4, 5, 6}}, 'categories': {{'a', 'b'}, {'c', 'd'}}}
 print("\nQuestion 49: Create a dictionary with nested sets: {'groups': {{1, 2, 3}, {4, 5, 6}}, 'categories': {{'a', 'b'}, {'c', 'd'}}}")
-
+N={'groups': {frozenset({1, 2, 3}), frozenset({4, 5, 6})}, 'categories': {frozenset({'a', 'b'}), frozenset({'c', 'd'})}}
+print(N)
 
 # Question 50: Find union of all nested sets
 print("\nQuestion 50: Find union of all nested sets")
-# Your code here 
+M=N['groups']
+L=N['categories']
+K=set().union(*M)
+print(K)
+K=set().union(*L)
+print(K)
