@@ -89,7 +89,8 @@ for i in srt:
 
 # Question 11: Find the most frequent character in "mississippi"
 print("\nQuestion 11: Find the most frequent character in 'mississippi'")
-
+N='mississippi'
+print(max(N))
 
 
 # Question 12: Check if two strings are anagrams: "listen" and "silent"
@@ -178,6 +179,14 @@ print('HelloWorld'.isalpha())
 
 # Question 23: Convert "hello world" to "hElLo WoRlD" (alternating case)
 print("\nQuestion 23: Convert 'hello world' to 'hElLo WoRlD' (alternating case)")
+N='hElLo WoRlD'
+M=''
+for i in range(len(N)):
+    if i%2==0:
+        M+=N[i].upper()
+    else:
+        M+=N[i].lower()
+print(M)
 
 
 # Question 24: Find all positions of 'a' in "banana"
@@ -210,7 +219,9 @@ print(L)
 
 # Question 28: Find the shortest word in "Python is a programming language"
 print("\nQuestion 28: Find the shortest word in 'Python is a programming language'")
-
+N='Python is a programming language'
+M=N.split(min(N))
+print(M)
 
 # Question 29: Count words that start with 'p' in "Python programming is powerful"
 print("\nQuestion 29: Count words that start with 'p' in 'Python programming is powerful'")
@@ -261,6 +272,12 @@ print(L)
 
 # Question 35: Check if string is a valid phone number: "+1-555-123-4567"
 print("\nQuestion 35: Check if string is a valid phone number: '+1-555-123-4567'")
+N='+1-555-123-4567'
+M=N.replace("-","")
+if M.startswith ('+1') and len(M)==12:
+    print('valid')
+else:
+    print('invalid')
 
 
 # Question 36: Extract numbers from "abc123def456ghi789"
@@ -273,52 +290,105 @@ for i in N:
 
 # Question 37: Convert "snake_case" to "camelCase"
 print("\nQuestion 37: Convert 'snake_case' to 'camelCase'")
-
+N='snake_case'
+M=N.replace("_","")
+print(M)
 
 # Question 38: Check if string is a valid palindrome ignoring case: "A man a plan a canal Panama"
 print("\nQuestion 38: Check if string is a valid palindrome ignoring case: 'A man a plan a canal Panama'")
+N=('A man a plan a canal Panama')
+M=N.replace('','').lower()
+if M==M[::-1]:
+    print("palindrome")
+else:
+    print("not palindrome")
 
     
-
 # Question 39: Find the most common word in "the quick brown fox jumps over the lazy dog"
 print("\nQuestion 39: Find the most common word in 'the quick brown fox jumps over the lazy dog'")
-# Your code here
+
+
 
 # Question 40: Generate acronym from "National Aeronautics and Space Administration"
 print("\nQuestion 40: Generate acronym from 'National Aeronautics and Space Administration'")
-# Your code here
+N='National Aeronautics and Space Administration'
+M=N.split()
+for i in N:
+    if len(i)>3:
+        print(i[0:1],end="")
 
 # Question 41: Check if string contains balanced parentheses: "((()))"
 print("\nQuestion 41: Check if string contains balanced parentheses: '((()))'")
-# Your code here
+N='((()))'
+if len(N)%2==0:
+    print('is equals')
+else:
+    print('not equals')
 
 # Question 42: Convert "hello world" to Morse code
 print("\nQuestion 42: Convert 'hello world' to Morse code")
-# Your code here
+N='hello world'
+M=morse =dict({'a':'.-','b':'-...','c':'-.-.','d':'-..','e':'.','f':'..-.','g':'--.','h':'....','i':'..','j':'.---','k':'-.-',
+               'l':'.-..','m':'--','n':'-.','o':'---','p':'.--.','q':'--.-','r':'.-.','s':'...','t':'-','u':'..-','v':'...-','w':'.--','x':'-..-',
+               'y':'-.--','z':'--..',' ':'/'})
+L=[]
+for i in N:
+    L.append(M[i])
+print(L)
+
 
 # Question 43: Find the longest common substring between "programming" and "grammar"
 print("\nQuestion 43: Find the longest common substring between 'programming' and 'grammar'")
-# Your code here
+N='programming'
+M='grammar'
+F=""
+for i in range(len(N)):
+    for j in range(i,len(N)+1):
+        x=N[i:j]
+        if x in M and len(x)>len(F):
+            F=x
+print(F)
+
 
 # Question 44: Check if string is a valid URL: "https://www.google.com"
 print("\nQuestion 44: Check if string is a valid URL: 'https://www.google.com'")
-# Your code here
+N='https://www.google.com'
+if N.startswith('https://') and N.endswith('.com'):
+    print('valid')
+else:
+    print('invalid')
+
 
 # Question 45: Extract all words with length > 5 from "Python programming is amazing and powerful"
 print("\nQuestion 45: Extract all words with length > 5 from 'Python programming is amazing and powerful'")
-# Your code here
+N='Python programming is amazing and powerful'
+M=N.split()
+for i in M:
+    if len(i)>5:
+        print(i,end=",")
 
 # Question 46: Convert "hello world" to Pig Latin
 print("\nQuestion 46: Convert 'hello world' to Pig Latin")
-# Your code here
+
 
 # Question 47: Check if string is a valid IPv4 address: "192.168.1.1"
 print("\nQuestion 47: Check if string is a valid IPv4 address: '192.168.1.1'")
-# Your code here
+N='192.168.1.1'
+M=N.split('.')
+for i in M:
+    if int(i) in range(0,255):
+        print('valid')
+    else:
+        print('invalid')
+
 
 # Question 48: Find all substrings of "abc"
 print("\nQuestion 48: Find all substrings of 'abc'")
-# Your code here
+N='abc'
+for i in range(len(N)):
+    for j in range(i,len(N)+1):
+        print(N[i:j],end=" ")
+
 
 # Question 49: Convert "hello world" to ROT13 encoding
 print("\nQuestion 49: Convert 'hello world' to ROT13 encoding")
@@ -326,4 +396,8 @@ print("\nQuestion 49: Convert 'hello world' to ROT13 encoding")
 
 # Question 50: Check if string is a valid credit card number: "4532015112830366"
 print("\nQuestion 50: Check if string is a valid credit card number: '4532015112830366'")
-# Your code here 
+N='4532015112830366'
+if len(N)==16:
+    print('valid')
+else:
+    print('invalid')
